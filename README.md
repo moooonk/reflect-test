@@ -5,7 +5,7 @@
 2.oracle jdk 21
 
 运行方式：\
-1.将gradle工程导入到ide环境中，分别以Java11和Java21运行SimpleTest.clsss，记录并对比控制台输出的测试用例耗时\~~~~
+1.将gradle工程导入到ide环境中，分别以Java11和Java21运行SimpleTest.clsss，记录并对比控制台输出的测试用例耗时\
 2.运行gradle jar，以java -jar 方式运行
 
 注意：需要添加jvm参数--add-opens java.base/java.lang=ALL-UNNAMED，才能正确运行反射代码
@@ -25,3 +25,5 @@ Java21;\
 case1:12286\
 case2:7437\
 case3:970
+
+测试显示同样的代码，在不同的测试用例下，Java21比Java11的反射Clone性能要低10~N倍，原因不明，有待探究
