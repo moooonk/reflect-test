@@ -1,3 +1,5 @@
+package com.monk;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Data implements Cloneable {

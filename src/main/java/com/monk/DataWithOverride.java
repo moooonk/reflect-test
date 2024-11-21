@@ -1,6 +1,8 @@
+package com.monk;
+
 import java.util.concurrent.ThreadLocalRandom;
 
-public class DataWithClone implements Cloneable {
+public class DataWithOverride implements Cloneable {
 
     private int number1;
     private int number2;
@@ -11,7 +13,7 @@ public class DataWithClone implements Cloneable {
     private double number7;
     private double number8;
 
-    public DataWithClone() {
+    public DataWithOverride() {
         number1 = ThreadLocalRandom.current().nextInt();
         number2 = ThreadLocalRandom.current().nextInt();
         number3 = ThreadLocalRandom.current().nextLong();
@@ -93,6 +95,16 @@ public class DataWithClone implements Cloneable {
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
 }

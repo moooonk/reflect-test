@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "me.champeau.jmh" version "0.7.2"
 }
 
 group = 'org.example'
@@ -11,7 +12,7 @@ repositories {
 }
 
 dependencies {
-
+    jmh 'commons-io:commons-io:2.7'
 }
 
 test {
@@ -23,4 +24,10 @@ jar {
         attributes 'Main-Class': 'SimpleTest'
         attributes 'Class-Path': ''
     }
+}
+
+jmh {
+    jvm = 'C:\\Program Files\\Java\\jdk-17.0.12\\bin\\java.exe'
+//    jvm = 'C:\\Program Files\\Java\\jdk-21.0.2\\bin\\java.exe'
+    jvmArgs = ['-Xmx4g', '-Dfile.encoding=UTF-8', '--add-opens java.base/java.lang=ALL-UNNAMED']
 }
