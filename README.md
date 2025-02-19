@@ -1,3 +1,5 @@
+此问题已被官方采纳，在JDK24+b27中修复：https://bugs.openjdk.org/browse/JDK-8343377
+
 本项目用于对比Java17和Java21下反射调用clone函数时性能差异\
 This project used for compare the performance difference when reflection invoke clone method in Java 17 and Java 21.
 
